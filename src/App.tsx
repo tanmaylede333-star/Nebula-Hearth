@@ -21,14 +21,6 @@ const LOVE_DROPS = Array.from({ length: 24 }, (_, index) => ({
   rotate: index % 2 === 0 ? "-12deg" : "8deg",
 }));
 
-const LOG_LINES = [
-  (n: number) => `>>> heart.beat(dt=1/60)  ->  systole #${n}`,
-  (n: number) => `dust: 3400 particles re-emitted  [beat ${n}]`,
-  () => `love = 0.${Math.floor(700 + Math.random() * 299)}  # normalised`,
-  (n: number) => `phase wrapped -> 0.000  (cycle ${n})`,
-  () => `nebula.recolor(core=palette.core)  # ok`,
-];
-
 export default function App() {
   const [bpm, setBpm] = useState(72);
   const [intensity, setIntensity] = useState(1.0);
