@@ -13,7 +13,7 @@ export default defineConfig({
   plugins: [react(), tailwindcss(), viteSingleFile()],
   server: {
     host: "0.0.0.0",
-    strictPort: true,
+    strictPort: false,
   },
   resolve: {
     alias: {
